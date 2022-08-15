@@ -3,6 +3,15 @@ import "./TextInput.css";
 
 const TextInput = (props) => {
   const { value, icon, color, maxChar, codeInput } = props;
+
+  const hintImg = (event) => {
+    let value = document.querySelector("#tb").value;
+    if (value !== "") {
+      document.querySelector(".text-icon").style.display = "inline-block";
+    } else document.querySelector(".text-icon").style.display = "none";
+    codeInput();
+  };
+
   return (
     <div className="text-container">
       <input
@@ -12,7 +21,7 @@ const TextInput = (props) => {
         required
         placeholder={value}
         maxLength={maxChar}
-        onChange={codeInput}
+        onChange={hintImg}
       />
       <label for="tb" className="place-holder">
         {value}
