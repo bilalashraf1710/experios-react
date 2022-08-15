@@ -1,0 +1,58 @@
+.text-container {
+  position: relative;
+  border: 1px solid white;
+  border-radius: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin: 0.85em;
+}
+
+.text-transparent {
+  color: white;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  padding-top: 0.5em;
+  padding-left: 0.8em;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.text-box:focus {
+  opacity: 1;
+}
+.text-box::placeholder {
+  opacity: 0;
+}
+.text-box:focus ~ .place-holder,
+.text-box:valid ~ .place-holder {
+  transform: translate(0.6875em, 0px);
+  font-size: 0.75em;
+}
+
+.place-holder {
+  position: absolute;
+  pointer-events: none;
+  top: 0.5em;
+  left: 0.5em;
+  color: white;
+  font-size: 1.2em;
+  transition: 0.2s ease-out all;
+}
+
+.text-icon {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  height: 60%;
+  width: 7.5%;
+  max-height: 1.6875em;
+  max-width: 1.5625em;
+}
+
+.text-box:focus-visible {
+  outline: none;
+}

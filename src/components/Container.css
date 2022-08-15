@@ -1,0 +1,55 @@
+.container {
+  color: white;
+  background-color: rgb(17, 52, 70, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid #35515d;
+  border-radius: 10px;
+  margin: 7%;
+  padding: 3% 9%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* CONTAINER ELEMENTS */
+.heading {
+  font-size: 3.75em;
+  margin: 0.25em;
+}
+
+.sub-heading {
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  margin: 0.5em;
+}
+
+/* Form Elements */
+
+.form {
+  width: 80%;
+  max-width: 28.875em;
+  margin: 0.5em;
+}
+
+.form div {
+  height: 2.625em;
+  /* width: 28.875em; */
+}
+
+/* Error Message */
+.error-msg {
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5em 0.5em 1.5em 0.5em;
+}
+
+.error-img {
+  width: 12%;
+}
+
+.error-desc {
+  padding-left: 0.65em;
+}

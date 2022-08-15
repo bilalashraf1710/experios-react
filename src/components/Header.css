@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 73.125em;
+  margin: 2% auto 10.5em;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Logo - Rightside */
+.logo img {
+  margin: 0.5em;
+}
+
+.logo-img1 {
+  width: 8.6119em;
+  height: 2.1875em;
+}
+
+.logo-img2 {
+  width: 6.1875em;
+  height: 2.375em;
+}
+
+/* Actions - Leftside */
+.action1,
+.action2 {
+  flex-wrap: nowrap;
+  color: white;
+  background-color: rgba(17, 52, 70, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid #35515d;
+  border-radius: 25px;
+  padding: 0.35em 1.5em 0.35em 0.75em;
+  margin: 5px;
+}
+
+.action1 p,
+.action2 p {
+  padding-left: 0.45em;
+  margin: 0;
+}
+
+.action-desc {
+  font-size: 1em;
+  width: fit-content;
+  display: inline-block;
+}

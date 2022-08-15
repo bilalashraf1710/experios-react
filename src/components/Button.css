@@ -1,0 +1,22 @@
+.btn-container {
+  margin: 0.85em;
+}
+.btn {
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.btn-red {
+  background-image: linear-gradient(to bottom, #f80705, #7b1e1d);
+  color: white;
+  padding: 0px;
+}
+
+.btn-img {
+  vertical-align: text-bottom;
+  width: 1.15em;
+  height: 1.15em;
+}
