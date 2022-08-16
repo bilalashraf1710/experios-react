@@ -1,28 +1,28 @@
 import React, { useState } from "react";
-import Button from "./Button";
-import TextInput from "./TextInput";
-import "./Container.css";
+import Button from "../components/Button";
+import TextInput from "../components/TextInput";
+import "./GameForm.css";
 
 // Images and Icons
 import Error from "../images/icons/login/error.svg";
 import Fingerprint from "../images/icons/login/fingerprint.svg";
 import Question from "../images/icons/login/question.svg";
 
-const Container = (props) => {
+const GameForm = () => {
   const [textfield, setTextfield] = useState("");
+  const [showError, setShowError] = useState(false);
 
-  const codeInput = (event) => {
+  const changeHandler = (event) => {
     let input = event.target.value;
-    setTextfield(input);
+    setTextfield(() => input);
   };
 
-  const toggleError = (event) => {
-    let input = document.querySelector(".text-box").value;
-    debugger;
-    if (input.length !== 8 || input !== "12345678") {
-      document.querySelector(".error-msg").style.display = "flex";
+  const toggleError = () => {
+    alert(textfield);
+    if (textfield.length !== 8 || textfield !== "12345678") {
+      setShowError(true);
     }
-    alert(input);
+    // alert(textfield);
   };
 
   return (
@@ -31,8 +31,9 @@ const Container = (props) => {
       <p className="sub-heading">Enter your game code below to get started</p>
       <form className="form" action="">
         <TextInput
-          value={"Game Code"}
-          textfield={codeInput}
+          label={"Game Code"}
+          value={textfield}
+          changeHandler={changeHandler}
           icon={{ img: Question, alt: "Hint" }}
           color={"transparent"}
           maxChar={"8"}
@@ -44,7 +45,7 @@ const Container = (props) => {
           checkInput={toggleError}
         />
       </form>
-      <div className="error-msg">
+      <div className={`error-msg error-msg-${showError}`}>
         <img className="error-img" src={Error} alt="error" />
         <p className="error-desc">Invalid game code provided</p>
       </div>
@@ -52,4 +53,4 @@ const Container = (props) => {
   );
 };
 
-export default Container;
+export default GameForm;

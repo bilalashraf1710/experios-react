@@ -16,6 +16,7 @@
 .heading {
   font-size: 3.75em;
   margin: 0.25em;
+  word-break: break-word;
 }
 
 .sub-heading {
@@ -44,6 +45,14 @@
   justify-content: space-around;
   align-items: center;
   margin: 0.5em 0.5em 1.5em 0.5em;
+}
+
+.error-msg-true {
+  display: flex;
+}
+
+.error-msg-false {
+  display: none;
 }
 
 .error-img {
