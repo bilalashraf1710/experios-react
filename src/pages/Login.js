@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import Container from "../components/Container";
+import Header from "../containers/Header";
+import GameForm from "../containers/GameForm";
 import "./Login.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="login">
       <Header connected={"6"} status="exit" />
       <div className="flex-col">
-        <Container></Container>
+        <GameForm />
       </div>
     </div>
   );

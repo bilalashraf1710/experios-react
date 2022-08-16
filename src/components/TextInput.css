@@ -61,3 +61,11 @@
 .text-box:focus-visible {
   outline: none;
 }
+
+.display-icon-true {
+  display: inline-block;
+}
+
+.display-icon-false {
+  display: none;
+}

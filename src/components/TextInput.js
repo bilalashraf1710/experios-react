@@ -1,33 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TextInput.css";
 
 const TextInput = (props) => {
-  const { value, icon, color, maxChar, codeInput } = props;
+  const { value, icon, color, maxChar, changeHandler, label } = props;
+  const [displayIcon, setDisplayIcon] = useState(false);
 
-  const hintImg = (event) => {
-    let value = document.querySelector("#tb").value;
-    if (value !== "") {
-      document.querySelector(".text-icon").style.display = "inline-block";
-    } else document.querySelector(".text-icon").style.display = "none";
-    codeInput();
+  const onChange = (event) => {
+    const val = event.target.value;
+    changeHandler(val);
+    if (val !== "") setDisplayIcon(true);
+    else setDisplayIcon(false);
   };
 
   return (
     <div className="text-container">
       <input
         id="tb"
+        value={value}
         className={`text-box text-${color}`}
         type="text"
         required
-        placeholder={value}
         maxLength={maxChar}
-        onChange={hintImg}
+        onChange={onChange}
       />
-      <label for="tb" className="place-holder">
-        {value}
-      </label>
+      <label className="place-holder">{label}</label>
       <img
-        className="text-icon"
+        className={`text-icon display-icon-${displayIcon}`}
         src={icon.img}
         alt={icon.alt}
         width="25"
