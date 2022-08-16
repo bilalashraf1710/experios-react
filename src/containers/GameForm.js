@@ -11,18 +11,10 @@ import Question from "../images/icons/login/question.svg";
 const GameForm = () => {
   const [textfield, setTextfield] = useState("");
   const [showError, setShowError] = useState(false);
-
-  const changeHandler = (event) => {
-    let input = event.target.value;
-    setTextfield(() => input);
-  };
+  const changeHandler = (input) => setTextfield(input);
 
   const toggleError = () => {
-    alert(textfield);
-    if (textfield.length !== 8 || textfield !== "12345678") {
-      setShowError(true);
-    }
-    // alert(textfield);
+    if (textfield.length !== 8 || textfield !== "12345678") setShowError(true);
   };
 
   return (

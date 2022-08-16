@@ -6,7 +6,7 @@ const Button = (props) => {
   return (
     <div className="btn-container">
       <button className={`btn btn-${color}`} onClick={checkInput}>
-        {value} &nbsp;
+        {value}
         <img className="btn-img" src={icon.img} alt={icon.alt} />
       </button>
     </div>

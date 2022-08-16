@@ -6,9 +6,9 @@ const TextInput = (props) => {
   const [displayIcon, setDisplayIcon] = useState(false);
 
   const onChange = (event) => {
-    changeHandler(event);
-    console.log(value);
-    if (event.target.value !== "") setDisplayIcon(true);
+    const val = event.target.value;
+    changeHandler(val);
+    if (val !== "") setDisplayIcon(true);
     else setDisplayIcon(false);
   };
 
